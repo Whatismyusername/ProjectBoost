@@ -6,7 +6,7 @@ public class CameraMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject player;
-    Vector3 offset = new Vector3(0, 5, -30);
+    Vector3 offset = new Vector3(0, 5f, -30f);
     void Start()
     {
         player = GameObject.Find("Rocket Ship");

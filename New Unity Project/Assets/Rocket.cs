@@ -58,9 +58,19 @@ public class Rocket : MonoBehaviour
                 break;
             case "Respawn":
                 break;
+            case "Station":
+                // Freezes motion
+                rigidBody.velocity = new Vector3(0, 0, 0);
+                break;
             default:
                 Debug.Log("DEAD");
                 break;
+        }
+    }
+
+    private void fixRotation() {
+        if (transform.position.z != 0) {
+            transform.position = new Vector3 (transform.position.x, transform.position.y, 0f);
         }
     }
 }
